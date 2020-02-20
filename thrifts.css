@@ -1,0 +1,53 @@
+body		{background: linear-gradient(135deg, OrangeRed, Orange);}
+
+header		{font-family:Georgia, "Times New Roman", serif;
+			text-align: center;
+			letter-spacing: 0.50em;
+			font-size: 2em;
+			border: 20px solid White;}
+			
+header	a	{color: White;
+			font-weight: bold;
+			text-decoration: none;}
+			
+header a:hover	{color: OrangeRed;
+				transition: color 3s ease-out;}
+				
+nav 		{margin: .5em;
+			text-align: right;
+			font-size: 1.5em;}
+			
+nav	a		{color: White;
+			font-weight: bold;
+			text-decoration: none;}
+			
+nav a:hover	{color: OrangeRed;
+			transition: color 3s ease-out;}	
+
+h2			{text-align: center;
+			color: Black;
+			font-weight: bold;}
+
+p			{font-size: 200%;
+			text-align: center;}
+			
+main		{background-color: White;}
+
+form 		{text-align: right;
+			color: White;
+			font-weight: bold;}
+
+footer		{text-align: center;
+			color: White;}
+footer a	{text-decoration: none;
+			color: White;}
+
+footer a:hover		{color: OrangeRed;
+					transition: color 3s ease-out;}
+
+#wrapper	{background-color: Red;
+			margin: auto;
+			width: 80%;
+			border: 20px solid White;
+			box-shadow: 10px 10px OrangeRed;
+			display: grid;}
