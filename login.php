@@ -35,7 +35,7 @@
 				<a class='nav-link' href='#'>Jerseys</a>
 			</li>
 			<li class='nav-item'>
-				<a class='nav-link' href='User Login/login.html'>Sign In</a>
+				<a class='nav-link' href='login.php'>Sign In</a>
 			</li>
 			<li class='nav-item'>
 				<a class='nav-link' href='#'>Sign Up</a>
