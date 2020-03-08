@@ -6,12 +6,22 @@ body, html	{
 	background-size: 100%;
 }
 
+.navbar	{
+	padding: .8rem;
+}
+.navbar-nav li	{
+	padding-right: 20px;
+}
+.nav-link	{
+	font-size: 1.1em !important;
+}
+
 .user_card	{
 	height: 400px;
 	width: 350px;
 	margin-top: auto;
 	margin-bottom: auto;
-	background: #3299CC;
+	background: #3f3f3f;
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -76,7 +86,32 @@ body, html	{
 	background-color: #c0392b !important;
 }
 
+.custom-control-label	{
+	color: White;
+}
+
+.d-flex	{
+	color: White;
+}
+
 .ml-2	{
 	color: #c0392b;
 	font-weight: Bold;
+}
+
+footer	{
+	background-color: #3f3f3f;
+	color: #d5d5d5;
+	padding-top: 2rem;
+}
+
+hr.light	{
+	border-top: 1px solid #d5d5d5;
+	width: 75%;
+	margin-top: .8rem;
+	margin-bottom: 1rem;
+}
+
+footer a {
+	color: #d5d5d5;
 }
