@@ -74,6 +74,9 @@ hr.light-100	{
 	margin-bottom: 1rem;
 }
 
+.brand	{
+	border-radius: 50%;
+}
 /*---Media Queries --*/
 @media (max-width: 992px) {
 
