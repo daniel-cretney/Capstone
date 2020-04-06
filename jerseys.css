@@ -26,8 +26,12 @@ input	{
 	width: 30px;
 }
 .cart	{
-	background: #FE980F;
+	background: #c0392b;
 	color: #FFFFFF;
-	font-size: 15px;
-	margin-left: 20px;
+	font-size: 12px;
+	margin-right: 20px;
+}
+
+.col-md-4	{
+	margin-bottom: 3em;
 }
