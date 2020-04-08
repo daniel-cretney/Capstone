@@ -1,12 +1,3 @@
-<?php
-
-	session_start();
-	
-	if(isset($_SESSION['userlogin'])){
-		header("Location: index.php");
-	}
-	
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +23,7 @@
 				<a class='nav-link' href='index.html'>Home</a>
 			</li>
 			<li class='nav-item'>
-				<a class='nav-link' href='jerseys.html'>Jerseys</a>
+				<a class='nav-link' href='jerseys.php'>Jerseys</a>
 			</li>
 			<li class='nav-item'>
 				<a class='nav-link active' href='login.html'>Sign In</a>
@@ -53,7 +44,7 @@
 				</div>
 			</div>
 			<div class='d-flex justify-content-center form_container'>
-				<form>
+				<form method='post' action=''>
 					<div class='input-group mb-3'>
 						<div class='input-group-append'>
 							<span class='input-group-text'><i class='fas fa-user'></i></span>
@@ -72,11 +63,11 @@
 							<label class='custom-control-label' for='customControlInline'>Remember Me</label>
 						</div>
 					</div>
-			</div>
-			<div class='d-flex justify-content-center mt-3 login_container'>
-				<button type='button' name='button' id='login' class='btn login_btn'>Login</button>
-			</div>
+				<div class='d-flex justify-content-center mt-3 login_container'>
+					<button type='button' name='button' id='login' class='btn login_btn'>Login</button>
+				</div>
 				</form>
+			</div>
 			<div class='mt-4'>
 				<div class='d-flex justify-content-center links'>
 				Don't have an account?<a href='registration.html' class='ml-2'>Sign Up</a>
@@ -118,7 +109,6 @@
 		});
 	});
 </script>
-<!--- Footer -->
 <footer>
 <div class='container-fluid padding'>
 <div class='row text-center'>
