@@ -5,7 +5,7 @@
 <html>
 <body>
 <?php
-	 $stmt = $pdo->query('SELECT Name FROM inventory');
+	 $stmt = $pdo->query('SELECT Name FROM Inventory');
 while ($row = $stmt->fetch())
 {
     echo $row['Name'] . "\n";
