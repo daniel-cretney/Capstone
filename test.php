@@ -5,10 +5,10 @@
 <html>
 <body>
 <?php
-	 $stmt = $pdo->query('SELECT Name FROM Inventory');
+	 $stmt = $pdo->query('SELECT FName FROM Inventory');
 while ($row = $stmt->fetch())
 {
-    echo $row['Name'] . "\n";
+    echo $row['FName'] . "\n";
 }
 ?>
 </body>
