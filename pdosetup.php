@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$db = 'dealerdans';
-$user = 'root';
-$pass = '';
+$host = 'dealer-dans.clioivi2itqg.us-east-1.rds.amazonaws.com';
+$db = 'DealerDans';
+$user = 'admin';
+$pass = 'Dannyrocks1';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
