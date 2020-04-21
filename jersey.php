@@ -7,6 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dealer Dan's</title>
+	<link rel='icon' href='img/favicon.png' type='image/x-icon'>
 	<link rel='stylesheet' type='text/css' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
 	<link rel='stylesheet' type='text/css' href='jerseys.css'>
 	<link rel='stylesheet' type='text/css' href='page_format.css'>
@@ -18,7 +19,7 @@
 <body>
 <nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
 <div class='container-fluid'>
-	<a class='navbar-brand' href='index.html'><img class='brand'src='img/dealerdans.png'>  Dealer Dan's</a>
+	<a class='navbar-brand' href='index.php'><img class='brand'src='img/dealerdans.png'>  Dealer Dan's</a>
 	<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarResponsive'>
 		<span class='navbar-toggler-icon'></span>
 	</button>
@@ -52,7 +53,7 @@
 						<img src="<?php echo $row['url'];?>" class="d-block w-100" name='Name' alt="Name">
 						<h3><?php echo $row['Name']; ?></h3>
 						<h5>Size: <?php echo $row['Size']; ?></h5>
-						<h5>Price: <?php echo $row['Price']; ?></h5>
+						<h5>Price: $<?php echo $row['Price']; ?></h5>
 						<button type='submit' name='add to cart' class='btn-btn-default cart'>Add to Cart</button>
 					</div>
 					<?php
@@ -65,7 +66,7 @@
 						<img src="<?php echo $row['url'];?>" class="d-block w-100" name='Name' alt="Name">
 						<h3><?php echo $row['Name']; ?></h3>
 						<h5>Size: <?php echo $row['Size']; ?></h5>
-						<h5>Price: <?php echo $row['Price']; ?></h5>
+						<h5>Price: $<?php echo $row['Price']; ?></h5>
 						<button type='submit' name='add to cart' class='btn-btn-default cart'>Add to Cart</button>
 					</div>
 					<?php
@@ -76,7 +77,7 @@
 						<img src="<?php echo $row['url'];?>" class="d-block w-100" name='Name' alt="Name">
 						<h3><?php echo $row['Name']; ?></h3>
 						<h5>Size: <?php echo $row['Size']; ?></h5>
-						<h5>Price: <?php echo $row['Price']; ?></h5>
+						<h5>Price: $<?php echo $row['Price']; ?></h5>
 						<button type='submit' name='add to cart' class='btn-btn-default cart'>Add to Cart</button>
 					</div>
 					<?php
