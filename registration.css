@@ -10,9 +10,9 @@ body, html	{
 }
 
 .user_card	{
-	height: 700px;
+	height:700px;
 	width: 350px;
-	margin-top: auto;
+	margin-top: 75px;
 	margin-bottom: auto;
 	background: #3f3f3f;
 	position: relative;
