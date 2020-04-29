@@ -1,6 +1,3 @@
-<?php
-	include 'pdosetup.php';
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +6,13 @@
 	<title>Dealer Dan's Login</title>
 	<link rel='stylesheet' type='text/css' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
 	<script src="https://kit.fontawesome.com/f46d11bbae.js" crossorigin="anonymous"></script>
-	<link rel='stylesheet' type='text/css' href='cart.css'>
+	<link rel='stylesheet' type='text/css' href='login.css'>
 	
 </head>
 <body>
 <nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
 <div class='container-fluid'>
-	<a class='navbar-brand' href='index.html'><img class='brand' src='img/dealerdans.png'>   Dealer Dan's</a>
+	<a class='navbar-brand' href='index.php'><img class='brand' src='img/dealerdans.png'>   Dealer Dan's</a>
 	<button class='navbar-toggler' type='button' data-toggle='collapse'
 	data-target='#navbarResponsive'>
 		<span class='navbar-toggler-icon'></span>
@@ -29,10 +26,10 @@
 				<a class='nav-link' href='jersey.php'>Jerseys</a>
 			</li>
 			<li class='nav-item'>
-				<a class='nav-link' href='login.php'>Sign In</a>
+				<a class='nav-link active' href='login.php'>Sign In</a>
 			</li>
 			<li class='nav-item'>
-				<a class='nav-link active' href='cart.php'>Cart</a>
+				<a class='nav-link' href='cart.php'>Cart</a>
 			</li>
 		</ul>
 	</div>
@@ -45,6 +42,21 @@
 				<div class='brand_logo_container'>
 					<img src='img/dealerdans.png' class='brand_logo' alt='Dealer Dans Logo'>
 				</div>
+			</div>
+			<div class='d-flex justify-content-center form_container'>
+				<form method='post' >
+                <?php
+                    include 'pdosetup.php';
+                    session_start();
+                    if(isset($_SESSION['username'])){
+                        echo '<div class="center"><h3>Login Success, Hello ' . $_SESSION['username'] . '</h3>';
+                        echo '<br><br><a href="logout.php" class="ml-2">Logout</a></div>';
+                    }
+                    else{
+                        header('location:login.php');
+                    }
+                ?>
+				</form>
 			</div>
 		</div>
 	</div>

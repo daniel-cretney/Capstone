@@ -1,23 +1,29 @@
 <?php
+	session_start();
 	include 'pdosetup.php';
+try{
 	if (isset($_POST['login'])){
-		if (empty($_POST['username']) || empty($_POST['password'])){
-			$message = "All fields are required";
+		if(empty($_POST['username']) || empty($_POST['pass'])){
+			$message = '<label>Both fields are required</label>';
 		}
 		else{
-			$query = "SELECT * FROM User WHERE Username = :username AND 'Password' = :password";
+			$query = "SELECT * FROM User WHERE Username = :username AND Pass = :pass";
 			$stmt = $pdo->prepare($query);
-			$stmt->execute(array('Username' => $_POST['username'], 'Password' => $_POST['password']));
+			$stmt->execute(array('username' => $_POST['username'], 'pass' => $_POST['pass']));
 			$count = $stmt->rowCount();
 			if ($count > 0){
 				$_SESSION['username'] = $_POST['username'];
-				header('Location:login_success.php');
+				header('location:login_success.php');
 			}
 			else{
-				echo "Username or Password is Incorrect";
+				$message =  "<label>Username or Password is Incorrect</label>";
 			}
 		}
 	}
+}
+catch(PDOException $error){
+	$message = $error->getMessage();
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,6 +62,11 @@
 	</div>
 </div>
 </nav>
+<?php
+	if(isset($message)){
+		echo '<div class="center"><h2><label class="text-danger">'.$message.'</label></h2></div>';
+	}
+?>
 <div class='container h-100'>
 	<div class='d-flex justify-content-center h-100'>
 		<div class='user_card'>
@@ -65,7 +76,7 @@
 				</div>
 			</div>
 			<div class='d-flex justify-content-center form_container'>
-				<form method='post' action=''>
+				<form method='post' >
 					<div class='input-group mb-3'>
 						<div class='input-group-append'>
 							<span class='input-group-text'><i class='fas fa-user'></i></span>
@@ -76,7 +87,7 @@
 						<div class='input-group-append'>
 							<span class='input-group-text'><i class='fas fa-key'></i></span>
 						</div>
-						<input type='password' name='password' id='password' class='form-control input_pass' placeholder='Enter Password' required>
+						<input type='password' name='pass' id='password' class='form-control input_pass' placeholder='Enter Password' required>
 					</div>
 					<div class='form-group'>
 						<div class='custom-control custom-checkbox'>
