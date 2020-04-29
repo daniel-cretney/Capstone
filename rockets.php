@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	include 'pdosetup.php'
 ?>
 <!DOCTYPE html>
@@ -42,6 +41,8 @@
 </div>
 </nav>
 <div class='container'>
+
+
 	<label>Selections:</label>
 		<select id='selections' onchange='location = this.value'>
 		<option>Sizes</option>
@@ -66,15 +67,15 @@
             <option value='warriors.php'>Warriors</option>
             <option value='76ers.php'>76ers</option>
 		</select> |
-		<select id='selections' onchange='location = this.value'>
+        <select id='selections' onchange='location = this.value'>
 		<option>New Arrivals</option>
 			<option value='newarrivals.php'>All</option>
-		</select>
+		</select> 
 		<br><br>
 
 	<form action='cart.php' method='POST'>
 		<?php
-			$stmt = $pdo->query('SELECT * FROM Inventory');
+			$stmt = $pdo->query('SELECT * FROM Inventory WHERE Team = "Rockets"');
 			$count = 0;
 			while ($row = $stmt->fetch()){
 				if ($count == 0){

@@ -72,7 +72,7 @@
 		<div class='carousel-caption'>
 			<h1 class='display-2'>Check our Newest Arrivals!</h1>
 			<h3>Wear them before you see someone else wearing them.</h3>
-			<a href='jersey.php'><button type='button' class='btn btn-primary btrn-lg'>
+			<a href='newarrivals.php'><button type='button' class='btn btn-primary btrn-lg'>
 			Check 'em out!</button></a>
 		</div>
 	</div>

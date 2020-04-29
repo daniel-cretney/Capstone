@@ -57,7 +57,7 @@ include 'pdosetup.php';
 <body>
 <nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
 <div class='container-fluid'>
-	<a class='navbar-brand' href='index.html'><img class='brand'src='img/dealerdans.png'>   Dealer Dan's</a>
+	<a class='navbar-brand' href='index.php'><img class='brand'src='img/dealerdans.png'>   Dealer Dan's</a>
 	<button class='navbar-toggler' type='button' data-toggle='collapse'
 	data-target='#navbarResponsive'>
 		<span class='navbar-toggler-icon'></span>
@@ -68,7 +68,7 @@ include 'pdosetup.php';
 				<a class='nav-link' href='index.php'>Home</a>
 			</li>
 			<li class='nav-item'>
-				<a class='nav-link' href='jerseys.php'>Jerseys</a>
+				<a class='nav-link' href='jersey.php'>Jerseys</a>
 			</li>
 			<li class='nav-item'>
 				<a class='nav-link' href='login.php'>Sign In</a>

@@ -49,7 +49,7 @@
                     include 'pdosetup.php';
                     session_start();
                     if(isset($_SESSION['username'])){
-                        echo '<div class="center"><h3>Login Success, Hello ' . $_SESSION['username'] . '</h3>';
+                        echo '<div class="center"><h3>Login Successful, Hello ' . $_SESSION['username'] . '</h3>';
                         echo '<br><br><a href="logout.php" class="ml-2">Logout</a></div>';
                     }
                     else{
