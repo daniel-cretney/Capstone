@@ -23,10 +23,10 @@ include 'pdosetup.php';
 		$pdoexec = $stmt->execute([":Username"=>$Username, ":Pass"=>$Pass, ":Email"=>$Email, ":FName"=>$FName, ":LName"=>$LName]);
 		
 		if ($pdoexec){
-			echo 'Data Inserted';
+			header('location:login.php');
 		}
 		else{
-			echo 'Data Not Inserted';
+			$message = 'Data Not Inserted';
 		}
 	}
 	// function checkUsernameExists($pdo, $Username){
@@ -81,6 +81,11 @@ include 'pdosetup.php';
 </div>
 </nav>
 <div class='container h-100'>
+	<?php 
+		if(isset($message)){
+			echo $message;
+		}
+	?>
 	<div class='d-flex justify-content-center h-100'>
 		<div class='user_card'>
 			<div class='d-flex justify-content-center'>
